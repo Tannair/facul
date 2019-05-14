@@ -1,0 +1,39 @@
+CREATE SCHEMA IF NOT EXISTS `atividade9` DEFAULT CHARACTER SET utf-8;
+USE `atividade9` ;
+
+-- -----------------------------------------------------
+-- Table `atividade9`.`clientes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `atividade9`.`clientes` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '',
+  `nome` VARCHAR(155) NOT NULL COMMENT '',
+  `RG` INT(12) NOT NULL COMMENT '',
+  `idade` TINYINT(2) NOT NULL COMMENT '',
+  PRIMARY KEY (`id`)  COMMENT '')
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `atividade9`.`fornecedores`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `atividade9`.`fornecedores` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '',
+  `nome` VARCHAR(155) NOT NULL COMMENT '',
+  `endereco` VARCHAR(255) NOT NULL COMMENT '',
+  `telefone` INT(11) NOT NULL COMMENT '',
+  PRIMARY KEY (`id`)  COMMENT '')
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `atividade9`.`usuarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `atividade9`.`usuarios` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '',
+  `usuario` VARCHAR(150) NOT NULL COMMENT '',
+  `senha` VARCHAR(255) NOT NULL COMMENT '',
+  `data_cadastro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '',
+  PRIMARY KEY (`id`)  COMMENT '')
+ENGINE = InnoDB;
+
+
